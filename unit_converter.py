@@ -39,4 +39,24 @@ def temp_converter():
     elif choice == "2":
         print(f"{value} °F = {(value - 32) * 5/9} °C\n")
 
-temp_converter()
+
+while True:
+
+    print("Unit Converter")
+    print("1. Length")
+    print("2. Weight")
+    print("3. Temperature")
+    print("4. Exit")
+
+    mChoice = input("Choose Category : ")
+
+    if mChoice == "1":
+        length_converter()
+    elif mChoice == "2":
+        weight_converter()
+    elif mChoice == "3":
+        temp_converter()
+    elif mChoice == "4":
+        break
+    else:
+        print("Invalid Choice!\n")
