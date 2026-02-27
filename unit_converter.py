@@ -1,48 +1,82 @@
+def get_number():
+    while True:
+        try:
+            return float(input("Enter Number : "))
+        except ValueError:
+            print("Enter a Valid Number!\n")
+
 def length_converter():
     print("\n Length Converter")
     print("1. KM to Miles")
     print("2. Miles to KM")
+    print("3. Meters → Feet")
+    print("4. Feet → Meters")
+    print("5. CM → Inches")
+    print("6. Inches → CM")
 
     choice = input("Choose : ")
-    value = float(input("Input Value : "))
+    value = get_number()
 
     if choice == "1":
         print(f"{value} KM = {value * 0.621371} Miles\n")
     elif choice == "2":
         print(f"{value} Miles = {value / 0.621371} KM\n")
-
+    elif choice == "3":
+        print(f"{value} M = {value * 3.28084:.2f} Feet\n")
+    elif choice == "4":
+        print(f"{value} Feet = {value / 3.28084:.2f} Meters\n")
+    elif choice == "5":
+        print(f"{value} CM = {value * 0.393701:.2f} Inches\n")
+    elif choice == "6":
+        print(f"{value} Inches = {value / 0.393701:.2f} CM\n")
+    else:
+        print("Invalid Choice\n")
 
 def weight_converter():
     print("\n Weight Converter")
     print("1. KG to Pounds")
     print("2. Pounds to KG")
+    print("3. Grams → Ounces")
+    print("4. Ounces → Grams")
 
     choice = input("Choose : ")
-    value = float(input("Input Value : "))
+    value = get_number()
 
     if choice == "1":
         print(f"{value} KG = {value * 2.20462} Pounds\n")
     elif choice == "2":
         print(f"{value} Pounds = {value / 2.2046} KG\n")
-
+    elif choice == "3":
+        print(f"{value} Grams = {value * 0.035274:.2f} Ounces\n")
+    elif choice == "4":
+        print(f"{value} Ounces = {value / 0.035274:.2f} Grams\n")
+    else:
+        print("Invalid Choice\n")
 
 def temp_converter():
     print("\n Temperature Converter")
     print("1. Celsius to Fahrenheit")
     print("2. Fahrenheit to Celsius")
+    print("3. Celsius → Kelvin")
+    print("4. Kelvin → Celsius")
 
     choice = input("Choose : ")
-    value = float(input("Input Value : "))
+    value = get_number()
 
     if choice == "1":
         print(f"{value} °C = {(value * 9/5) + 32} °F\n")
     elif choice == "2":
         print(f"{value} °F = {(value - 32) * 5/9} °C\n")
-
+    elif choice == "3":
+        print(f"{value}°C = {value + 273.15:.2f}K\n")
+    elif choice == "4":
+        print(f"{value}K = {value - 273.15:.2f}°C\n")
+    else:
+        print("Invalid Choice\n")
 
 while True:
 
-    print("Unit Converter")
+    print("-----Unit Converter-----")
     print("1. Length")
     print("2. Weight")
     print("3. Temperature")
@@ -57,6 +91,7 @@ while True:
     elif mChoice == "3":
         temp_converter()
     elif mChoice == "4":
+        print("------------------------")
         break
     else:
         print("Invalid Choice!\n")
