@@ -8,8 +8,8 @@ def get_number():
 #length
 def length_converter():
     print("\n Length Converter")
-    print("1. KM to Miles")
-    print("2. Miles to KM")
+    print("1. KM → Miles")
+    print("2. Miles → KM")
     print("3. Meters → Feet")
     print("4. Feet → Meters")
     print("5. CM → Inches")
@@ -36,8 +36,8 @@ def length_converter():
 #weight
 def weight_converter():
     print("\n Weight Converter")
-    print("1. KG to Pounds")
-    print("2. Pounds to KG")
+    print("1. KG → Pounds")
+    print("2. Pounds → KG")
     print("3. Grams → Ounces")
     print("4. Ounces → Grams")
 
@@ -58,8 +58,8 @@ def weight_converter():
 #temperature
 def temp_converter():
     print("\n Temperature Converter")
-    print("1. Celsius to Fahrenheit")
-    print("2. Fahrenheit to Celsius")
+    print("1. Celsius → Fahrenheit")
+    print("2. Fahrenheit → Celsius")
     print("3. Celsius → Kelvin")
     print("4. Kelvin → Celsius")
 
