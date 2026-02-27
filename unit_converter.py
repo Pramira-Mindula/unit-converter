@@ -9,7 +9,7 @@ def length_converter():
     if choice == "1":
         print(f"{value} KM = {value * 0.621371} Miles\n")
     elif choice == "2":
-        print(f"{value} Miles = {value / 0.621371} KM")
+        print(f"{value} Miles = {value / 0.621371} KM\n")
 
 
 def weight_converter():
@@ -23,7 +23,20 @@ def weight_converter():
     if choice == "1":
         print(f"{value} KG = {value * 2.20462} Pounds\n")
     elif choice == "2":
-        print(f"{value} Pounds = {value / 2.2046} KG")
+        print(f"{value} Pounds = {value / 2.2046} KG\n")
 
 
-weight_converter()
+def temp_converter():
+    print("\n Temperature Converter")
+    print("1. Celsius to Fahrenheit")
+    print("2. Fahrenheit to Celsius")
+
+    choice = input("Choose : ")
+    value = float(input("Input Value : "))
+
+    if choice == "1":
+        print(f"{value} °C = {(value * 9/5) + 32} °F\n")
+    elif choice == "2":
+        print(f"{value} °F = {(value - 32) * 5/9} °C\n")
+
+temp_converter()
